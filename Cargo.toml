@@ -1,0 +1,8 @@
+[package]
+name = "kvlite"
+version = "0.1.0"
+edition = "2021"
+description = "LSM-tree key-value store with Raft replication"
+license = "MIT"
+
+[dependencies]

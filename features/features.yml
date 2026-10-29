@@ -1,0 +1,78 @@
+# features/features.yml — THE FEATURE INDEX for kvlite (schema features/v1, governance kit v0.1.1).
+# One entry per capability, stable id KVL-NNN (never reused). status: shipped | partial | planned | deprecated | tbd.
+# `prd:` links each feature to PRD.md requirements. The PRD "Feature catalog" block is generated:
+#   python3 <bamr87/bamr87>/tools/governance_lint.py prd-sync . --write
+schema: features/v1
+repo: bamr87/kvlite
+
+features:
+  - id: KVL-001
+    title: "In-memory get/put/delete API with unit tests"
+    description: "In-memory get/put/delete API with unit tests."
+    implemented: true
+    status: shipped
+    prd: [FR1]
+    surface: cli
+    link: Cargo.toml
+    tags: [phase-1]
+    date: 2026-10-28
+  - id: KVL-002
+    title: "Write-ahead log with crash recovery"
+    description: "Write-ahead log with crash recovery."
+    implemented: false
+    status: planned
+    prd: [FR2]
+    surface: cli
+    docs: PRD.md
+    tags: [phase-1]
+    date: 2026-10-28
+  - id: KVL-003
+    title: "SSTable flush and point lookups across levels"
+    description: "SSTable flush and point lookups across levels."
+    implemented: false
+    status: planned
+    prd: [FR3]
+    surface: cli
+    docs: PRD.md
+    tags: [phase-2]
+    date: 2026-10-28
+  - id: KVL-004
+    title: "Background compaction and bloom filters"
+    description: "Background compaction and bloom filters."
+    implemented: false
+    status: planned
+    prd: [FR4]
+    surface: cli
+    docs: PRD.md
+    tags: [phase-2]
+    date: 2026-10-28
+  - id: KVL-005
+    title: "Raft leader election and log replication"
+    description: "Raft leader election and log replication."
+    implemented: false
+    status: planned
+    prd: [FR5]
+    surface: cli
+    docs: PRD.md
+    tags: [phase-3]
+    date: 2026-10-28
+  - id: KVL-006
+    title: "Network API (gRPC) and a CLI client"
+    description: "Network API (gRPC) and a CLI client."
+    implemented: false
+    status: planned
+    prd: [FR6]
+    surface: cli
+    docs: PRD.md
+    tags: [phase-3]
+    date: 2026-10-28
+  - id: KVL-007
+    title: "Standard CI gate"
+    description: "Every push and PR runs the fleet's shared standard-ci gate."
+    implemented: true
+    status: shipped
+    prd: [NFR1]
+    surface: infra
+    link: .github/workflows/ci.yml
+    tags: [ci]
+    date: 2026-10-28
