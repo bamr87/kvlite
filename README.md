@@ -27,7 +27,10 @@ A candidate embedded store for fleet tools (e.g. fleet activity log buffering) a
 
 ```bash
 cargo build && cargo test
+cargo run    # prints: kvlite 0.1.0: hello=world
 ```
+
+What exists today is phase 1's first step only: `MemStore` in [`src/store.rs`](src/store.rs), an in-memory `BTreeMap<String, String>` with `put` (last write wins), `get` and `delete`, plus a demo binary in [`src/main.rs`](src/main.rs) that writes and reads one key. Nothing is persisted yet — the write-ahead log is the next planned feature (KVL-002). The crate is a binary only; there is no library target or CLI arguments yet.
 
 ## How it grows
 
