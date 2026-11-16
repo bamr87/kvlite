@@ -22,7 +22,10 @@ cargo build && cargo test
 - `PRD.md` — requirements (FRn/NFRn) and the phased roadmap
 - `.github/` — CI, the `@claude` handler, the `evolve` lane (off by default), issue forms
 - `.claude/agents/builder.md` — the role the evolve lane runs as
-- everything else — the rust, lsm-tree skeleton
+- `Cargo.toml` — the crate: a library plus the `kvlite` binary, no dependencies (`Cargo.lock` is gitignored)
+- `src/lib.rs` — the library target; `src/store.rs` holds `MemStore`, the in-memory store that becomes the memtable
+- `src/main.rs` — the `kvlite` binary: an interactive put/get/del shell over `MemStore` on stdin and stdout
+- `tests/` — integration tests that run the `kvlite` binary (`tests/cli.rs`)
 
 ## Conventions
 

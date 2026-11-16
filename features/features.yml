@@ -8,12 +8,13 @@ repo: bamr87/kvlite
 features:
   - id: KVL-001
     title: "In-memory get/put/delete API with unit tests"
-    description: "In-memory get/put/delete API with unit tests."
+    description: "MemStore (src/store.rs, exported by the library target) keeps an ordered in-memory map with put (last write wins), get and delete. The kvlite binary is an interactive shell over it: one command per stdin line (put KEY VALUE, get KEY, del KEY, help), one reply per command (OK, the value, (nil) for a missing key, or ERR and a reason), exit 0 at end of input, and -h/--help for the usage. Nothing is persisted yet (KVL-002)."
     implemented: true
     status: shipped
     prd: [FR1]
     surface: cli
-    link: Cargo.toml
+    link: src/main.rs
+    tests: [src/store.rs, tests/cli.rs]
     tags: [phase-1]
     date: 2026-10-28
   - id: KVL-002
