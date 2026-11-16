@@ -13,7 +13,11 @@ A small LSM-tree key-value store in Rust, growing into a Raft-replicated cluster
 
 ```bash
 cargo build && cargo test
+cargo fmt --check                            # `cargo fmt` fixes what it reports
+cargo clippy --all-targets -- -D warnings    # any warning fails
 ```
+
+CI's `build` job runs the same three gates on every pull request and every push to `main`: `cargo fmt --check`, `cargo clippy --all-targets -- -D warnings`, then `cargo test`.
 
 ## Layout
 

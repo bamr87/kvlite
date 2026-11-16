@@ -27,6 +27,8 @@ A candidate embedded store for fleet tools (e.g. fleet activity log buffering) a
 
 ```bash
 cargo build && cargo test
+cargo fmt --check                            # formatting gate; `cargo fmt` fixes it
+cargo clippy --all-targets -- -D warnings    # lint gate; any warning fails
 printf 'put a 1\nget a\ndel a\nget a\n' | cargo run -q
 # OK
 # 1
