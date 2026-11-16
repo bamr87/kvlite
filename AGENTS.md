@@ -3,6 +3,8 @@
 
 # kvlite
 
+> kvlite's direction is to become the ultimate open home for all things embedded key-value storage and consensus: data, tools, resources and transparency, with an inspectable LSM-tree store and Raft replication that anyone can learn and reuse ([constitution](docs/constitution.md) §1).
+
 ## What this repo is
 
 A small LSM-tree key-value store in Rust, growing into a Raft-replicated cluster. Learn storage engines and consensus by building them: a write-ahead log, memtable, SSTables and compaction, then Raft replication across nodes.

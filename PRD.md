@@ -12,6 +12,17 @@ Learn storage engines and consensus by building them: a write-ahead log, memtabl
 | --- | --- | --- |
 | 0.1 | 2026-10-28 | Initial requirements and phased roadmap (repo foundation). |
 
+
+## 1.1 Missions
+
+kvlite's direction is to become the ultimate open home for all things embedded key-value storage and consensus — data, tools, resources and transparency, gathered in one place that anyone can inspect and reuse.
+
+1. **Provide data, tools, resources and transparency for all stakeholders, systems programmers, storage practitioners and the general public.** Learners, systems builders, fleet-tool authors, and the general public are first-class audiences. The aim is a shared, open commons: the same sources, the same tools, and the same trail of evidence for everyone.
+2. **Make storage engines and consensus learnable by building them in the open: a write-ahead log, memtable, SSTables and compaction, then Raft replication across nodes.** Each layer stays inspectable; correctness is proven by tests, not by claims.
+3. **Put that store in every learner's and builder's hands, and make it a candidate embedded store for fleet tools.** The path includes uses such as fleet activity-log buffering, and a systems-depth showcase in the portfolio — an open toolkit for working with all things embedded key-value storage and consensus.
+
+These missions set the course; they do not claim the work is finished. They serve the existing constitution and PRD purpose: learn storage and consensus by building them, then offer the result as a candidate embedded store. The earlier mission paragraph is absorbed into these three. Every feature must trace to them.
+
 ## 2. Goals
 
 - Durable single-node KV store (WAL + memtable + SSTables)
@@ -65,6 +76,7 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 | [KVL-005](features/features.yml) | Raft leader election and log replication | planned | [`PRD.md`](PRD.md) | FR5 |
 | [KVL-006](features/features.yml) | Network API (gRPC) and a CLI client | planned | [`PRD.md`](PRD.md) | FR6 |
 | [KVL-007](features/features.yml) | Standard CI gate | shipped | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) | NFR1 |
+| [KVL-008](features/features.yml) | Missions in constitution §1 | planned | [`docs/constitution.md`](docs/constitution.md) | §1.1 |
 
 **Requirement → feature trace**
 
@@ -77,4 +89,5 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 | FR5 | KVL-005 |
 | FR6 | KVL-006 |
 | NFR1 | KVL-007 |
+| §1.1 | KVL-008 |
 <!-- features:end -->
