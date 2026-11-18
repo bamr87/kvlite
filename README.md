@@ -51,7 +51,7 @@ Blank lines are skipped. An unknown command or a wrong number of arguments print
 
 ## How it grows
 
-The roadmap lives in [PRD.md](PRD.md) and [features/features.yml](features/features.yml) (ids `KVL-NNN`, most `status: planned`). Work arrives as pull requests from the hub's evolution and fan-out loops, the `@claude` handler, or the local `evolve` lane (off until `EVOLVE_ENABLED=true`). A human merges every PR. Rules: [docs/constitution.md](docs/constitution.md) · agent guide: [AGENTS.md](AGENTS.md).
+The roadmap lives in [PRD.md](PRD.md) and [features/features.yml](features/features.yml) (ids `KVL-NNN`, most `status: planned`). Work arrives as pull requests from the hub's evolution and fan-out loops, the `@claude` handler, or the local `evolve` lane (off until `EVOLVE_ENABLED=true`). A human merges every PR. Rules: [docs/constitution.md](docs/constitution.md) · agent guide: [AGENTS.md](AGENTS.md) · every document, one line each: [docs/README.md](docs/README.md) (regenerate with `python3 tools/docs_index.py --write`).
 
 ## License
 
