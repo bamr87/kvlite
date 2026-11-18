@@ -58,7 +58,7 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 
 | ID | Feature | Status | Where | Requirements |
 | --- | --- | --- | --- | --- |
-| [KVL-001](features/features.yml) | In-memory get/put/delete API with unit tests | shipped | [`Cargo.toml`](Cargo.toml) | FR1 |
+| [KVL-001](features/features.yml) | In-memory get/put/delete API with unit tests | shipped | [`src/main.rs`](src/main.rs) | FR1 |
 | [KVL-002](features/features.yml) | Write-ahead log with crash recovery | planned | [`PRD.md`](PRD.md) | FR2 |
 | [KVL-003](features/features.yml) | SSTable flush and point lookups across levels | planned | [`PRD.md`](PRD.md) | FR3 |
 | [KVL-004](features/features.yml) | Background compaction and bloom filters | planned | [`PRD.md`](PRD.md) | FR4 |
