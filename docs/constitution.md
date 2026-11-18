@@ -6,9 +6,17 @@
 > Agents read this before [AGENTS.md](../AGENTS.md) conventions, the [PRD](../PRD.md), or the
 > [feature catalog](../features/features.yml). Ratified by merged PR; amended only per § 8.
 
-## 1. Mission
+## 1. Missions
 
-Learn storage engines and consensus by building them: a write-ahead log, memtable, SSTables and compaction, then Raft replication across nodes. It is a learning-first portfolio project in the bamr87 fleet: A candidate embedded store for fleet tools (e.g. fleet activity log buffering) and a systems-depth showcase in the portfolio.
+kvlite's direction is to become the ultimate open home for all things embedded key-value storage and consensus — data, tools, resources and transparency, gathered in one place that anyone can inspect and reuse.
+
+1. **Provide data, tools, resources and transparency for all stakeholders, systems programmers, storage practitioners and the general public.** Learners, systems builders, fleet-tool authors, and the general public are first-class audiences. The aim is a shared, open commons: the same sources, the same tools, and the same trail of evidence for everyone.
+2. **Make storage engines and consensus learnable by building them in the open: a write-ahead log, memtable, SSTables and compaction, then Raft replication across nodes.** Each layer stays inspectable; correctness is proven by tests, not by claims.
+3. **Put that store in every learner's and builder's hands, and make it a candidate embedded store for fleet tools.** The path includes uses such as fleet activity-log buffering, and a systems-depth showcase in the portfolio — an open toolkit for working with all things embedded key-value storage and consensus.
+
+These missions set the course; they do not claim the work is finished. They serve the existing constitution and PRD purpose: learn storage and consensus by building them, then offer the result as a candidate embedded store. The earlier mission paragraph is absorbed into these three. Every feature must trace to them.
+
+_Source: [../PRD.md](../PRD.md) §1.1._
 
 ## 2. Invariants (non-negotiable)
 
