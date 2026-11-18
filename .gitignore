@@ -13,3 +13,5 @@ pr-result.txt
 
 # language
 /target/
+# not committed: the fleet always builds against the latest versions (no lockfiles)
+Cargo.lock
