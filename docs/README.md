@@ -12,7 +12,7 @@
 
 | Document | What it covers |
 | --- | --- |
-| [`AGENTS.md`](../AGENTS.md) | How to work in this repository — commands, layout, conventions; canonical for agents and contributors. |
+| [`AGENTS.md`](../AGENTS.md) | kvlite's direction is to become the ultimate open home for all things embedded key-value storage and consensus: data, tools, resources and transparency, with an inspectable LSM-tree store and Raft replication that anyone can learn and… |
 | [`CONTRIBUTING.md`](../CONTRIBUTING.md) | How to contribute: branches, commits, local gates and pull requests. |
 | [`CHANGELOG.md`](../CHANGELOG.md) | Release history: the notable changes in each version, newest first. |
 | [`SECURITY.md`](../SECURITY.md) | Supported versions and how to report a vulnerability privately. |
