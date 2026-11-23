@@ -29,8 +29,9 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v7
-      - uses: dtolnay/rust-toolchain@stable
+      - uses: dtolnay/rust-toolchain@v1   # tag ref (UPS-QA-40); @v1 needs the toolchain input
         with:
+          toolchain: stable
           components: rustfmt, clippy
       - name: Format (rustfmt)
         run: cargo fmt --check
