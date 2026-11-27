@@ -79,9 +79,41 @@ features:
     date: 2026-10-28
   - id: KVL-008
     title: "Missions in constitution §1"
-    description: "Three product missions under one direction statement, ratified through amendment 0002."
-    implemented: false
-    status: planned
+    description: "Three product missions under one direction statement, ratified through amendment 0002 (merged in #12)."
+    implemented: true
+    status: shipped
     prd: ["§1.1"]
     surface: docs
     docs: "docs/constitution.md"
+    tags: [governance]
+    date: 2026-11-18
+  - id: KVL-009
+    title: "Model-based differential tests and WAL crash/fault-injection harness"
+    description: "proptest generates random put/get/del (later flush/compact/reopen) sequences and checks every read against a BTreeMap model; WAL recovery is tested by truncating the last record at every byte offset and flipping bytes, asserting exactly the acknowledged prefix survives. Runs under cargo test with a bounded case count. Issue #20."
+    implemented: false
+    status: planned
+    prd: [FR7]
+    surface: lib
+    docs: PRD.md
+    tags: [phase-1, deep-dive]
+    date: 2026-11-27
+  - id: KVL-010
+    title: "Ordered range scans and prefix iteration"
+    description: "Library scan(range) and prefix() iterators over the store that skip tombstones, and a CLI scan <start> <end> command with one key-value line per hit; later layers implement the same iterator trait and are combined by a newest-wins merge iterator. Issue #21."
+    implemented: false
+    status: planned
+    prd: [FR8]
+    surface: cli
+    docs: PRD.md
+    tags: [phase-2, deep-dive]
+    date: 2026-11-27
+  - id: KVL-011
+    title: "Benchmarks and LSM amplification metrics"
+    description: "criterion benches for put/get/del at several value sizes, then write, read and space amplification once the WAL, SSTables and compaction exist; results per roadmap milestone recorded in docs/benchmarks.md (no CI gate). Issue #22."
+    implemented: false
+    status: planned
+    prd: [FR9]
+    surface: lib
+    docs: PRD.md
+    tags: [phase-2, deep-dive]
+    date: 2026-11-27

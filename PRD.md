@@ -11,6 +11,7 @@ Learn storage engines and consensus by building them: a write-ahead log, memtabl
 | Version | Date | Notes |
 | --- | --- | --- |
 | 0.1 | 2026-10-28 | Initial requirements and phased roadmap (repo foundation). |
+| 0.2 | 2026-11-27 | §1.1 Missions (amendment 0002, ratified in #12); FR7–FR9 planned from the cycle 1 day 29 deep dive. |
 
 
 ## 1.1 Missions
@@ -45,11 +46,14 @@ Phases are the build order: an agent picks the earliest unserved requirement fir
 
 - FR1: In-memory get/put/delete API with unit tests
 - FR2: Write-ahead log with crash recovery
+- FR7: Model-based differential tests against a reference map, plus crash/fault-injection tests for WAL recovery (#20)
 
 ### 4.2 Phase 2 — Core
 
 - FR3: SSTable flush and point lookups across levels
 - FR4: Background compaction and bloom filters
+- FR8: Ordered range scans and prefix iteration in the library and the CLI (#21)
+- FR9: Benchmarks for put/get/del and write/read/space amplification, recorded per milestone (#22)
 
 ### 4.3 Phase 3 — Fleet integration
 
@@ -76,7 +80,10 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 | [KVL-005](features/features.yml) | Raft leader election and log replication | planned | [`PRD.md`](PRD.md) | FR5 |
 | [KVL-006](features/features.yml) | Network API (gRPC) and a CLI client | planned | [`PRD.md`](PRD.md) | FR6 |
 | [KVL-007](features/features.yml) | Standard CI gate | shipped | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) | NFR1 |
-| [KVL-008](features/features.yml) | Missions in constitution §1 | planned | [`docs/constitution.md`](docs/constitution.md) | §1.1 |
+| [KVL-008](features/features.yml) | Missions in constitution §1 | shipped | [`docs/constitution.md`](docs/constitution.md) | §1.1 |
+| [KVL-009](features/features.yml) | Model-based differential tests and WAL crash/fault-injection harness | planned | [`PRD.md`](PRD.md) | FR7 |
+| [KVL-010](features/features.yml) | Ordered range scans and prefix iteration | planned | [`PRD.md`](PRD.md) | FR8 |
+| [KVL-011](features/features.yml) | Benchmarks and LSM amplification metrics | planned | [`PRD.md`](PRD.md) | FR9 |
 
 **Requirement → feature trace**
 
@@ -90,4 +97,7 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 | FR6 | KVL-006 |
 | NFR1 | KVL-007 |
 | §1.1 | KVL-008 |
+| FR7 | KVL-009 |
+| FR8 | KVL-010 |
+| FR9 | KVL-011 |
 <!-- features:end -->
